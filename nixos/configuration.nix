@@ -108,9 +108,8 @@
 
 # Ammendments
 
-  # vimrc
+  # vimrc (needs symlink (then use mv to add the .)
   environment.etc."vimrc".text = ''
-
     set number
     set tabstop=2
     set shiftwidth=2
@@ -122,13 +121,10 @@
     set wrap
     set linebreak
     syntax on
-    nixos.home-manager
   '';
-
 
   # tmux config
   environment.etc."tmux.conf".text = ''
-
     # Set tmux command mode to ` instead of Ctrl-b
     unbind C-b
     set -g prefix `
@@ -156,7 +152,7 @@
 
   '';
 
-  # bashrc
+  # bashrc (needs symlink)
   environment.interactiveShellInit = ''
     export PS1="\[\e[37m\]\u\[\e[m\]\[\e[32m\]::\[\e[31m\]\w\\[\e[32m\]\$ \[\e[37m\]"
     # vi = "vim";
