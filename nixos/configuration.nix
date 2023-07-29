@@ -8,7 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
+
+  # Activate flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -16,6 +20,9 @@
 
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = false;
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -41,6 +48,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # For Sublime
+  nixpkgs.config.allowUnfree = true;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -67,15 +76,16 @@
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
 
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.diddy = import ./home.nix;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim 
     wget
-    chromium
-    tmux
-    pkgs.gnome3.gnome-tweaks
-    git
   ];
 
 	
@@ -108,59 +118,13 @@
 
 # Ammendments
 
-  # vimrc (needs symlink (then use mv to add the .)
-  environment.etc."vimrc".text = ''
-    set number
-    set tabstop=2
-    set shiftwidth=2
-    set expandtab
-    set ai
-    set hlsearch
-    set ruler
-    set backspace=indent,eol,start
-    set wrap
-    set linebreak
-    syntax on
-  '';
-
-  # tmux config
-  environment.etc."tmux.conf".text = ''
-    # Set tmux command mode to ` instead of Ctrl-b
-    unbind C-b
-    set -g prefix `
-    
-    # Switch to previous window using ``
-    bind-key ` last-window
-    
-    # Use ` by pressing `-e
-    bind-key e send-prefix
-    
-    # Set tmux colours to default terminal colours
-    set -g default-terminal "screen-256color"
-    
-    # Format status bar
-    set -g status-left '[#I] ' # default
-    # set -g status-left ' ' # remove window number
-    set -g status-right '#[fg=color0,bg=color2] #(hostname) #[fg=color0,bg=color2] %d/%m #[fg=color0, bg=color2] %H:%M'
-    
-    # Set command layout to vim instead of emacs
-    setw -g mode-keys vi
-    
-    # Start windows and panes at 1, not 0
-    set -g base-index 1
-    setw -g pane-base-index 1
-
-  '';
-
   # bashrc (needs symlink)
   environment.interactiveShellInit = ''
-    export PS1="\[\e[37m\]\u\[\e[m\]\[\e[32m\]::\[\e[31m\]\w\\[\e[32m\]\$ \[\e[37m\]"
-    # vi = "vim";
-    # ls = "ls -l -G";
-    # python = "python3";
-    # pip = "pip3";
+
+    export PS1="\[\e[37m\]\u\[\e[m\]\[\e[32m\]::\[\e[31m\]\W\\[\e[32m\]\$ \[\e[37m\]"
   '';
 
 # End of ammendments.
 
 }
+
