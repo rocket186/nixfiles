@@ -1,18 +1,14 @@
 {pkgs, ...}: {
   home.packages = [
-    (pkgs.python311.withPackages (ppkgs: [
+    (pkgs.python312.withPackages (ppkgs: [
       ppkgs.numpy
       ppkgs.pandas
       ppkgs.matplotlib
       ppkgs.seaborn
       ppkgs.torch
 
-      ppkgs.pip
-
       ppkgs.ipykernel
       ppkgs.jupyterlab
-      ppkgs.notebook
-      ppkgs.jupyter-client
     ]))
   ];
 }
