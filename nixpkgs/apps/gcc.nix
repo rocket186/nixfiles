@@ -1,0 +1,7 @@
+{
+  programs.gcc = {
+    enable = true;
+    '';
+  };
+}
+

@@ -15,7 +15,7 @@
   home.stateVersion = "22.11";
   home.packages = with pkgs; [ 
     chromium
-    # gcc
+    gcc
     git
     gnome.gnome-terminal
     htop
