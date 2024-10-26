@@ -45,7 +45,9 @@ Fundamentals:
   For: Loop for a number of steps.
   While: Loop until a condition is met.
 
-  Symlink: ln -s ~/nixfiles/nixos ~/Documents/nix_config
+  Symlinks: 
+    ln -s ~/nixfiles/nixos ~/Documents/nix_config
+    ln -s ~/nixfiles/nixos/home.nix ~/nixfiles/nixpkgs/
 
 ----
 
