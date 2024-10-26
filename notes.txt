@@ -1,0 +1,51 @@
+System Management:
+
+  Remove Older Generations:
+    sudo nix-collect-garbage -d
+    sudo /run/current-system/bin/switch-to-configuration boot
+    nix-env --list-generations
+    nix-collect-garbage  --delete-old
+
+  Update nixpkgs: nix-channel --update
+
+  Nixpkgs Version: home-manager --version
+  Nixos Version: nixos-version
+
+  Rebuild (sudo nixos-rebuild):
+    test - build; switch; don't make boot
+    boot - build; don't switch; make boot
+    switch - build; switch; make boot
+    build - don't switch; don't make boot
+
+  Updates:
+    Update: nix-channel --update nixos; nixos-rebuild switch
+
+  Apocalypse:
+    Rebuild Bootloader: nixos-rebuild switch --install-bootloader
+
+  Garbage Collection: 
+    nix-collect-garbage -d
+
+  Flakes:
+    Fix Flakes: sudo nix-store --repair --verify --check-contents
+
+  ?: nix-env -q
+
+----
+
+Sys. Coding:
+
+  Let: Instantiate Variables
+  In: Define Logic
+
+----
+
+Fundamentals:
+
+  For: Loop for a number of steps.
+  While: Loop until a condition is met.
+
+  Symlink: ln -s ~/nixfiles/nixos ~/Documents/nix_config
+
+----
+

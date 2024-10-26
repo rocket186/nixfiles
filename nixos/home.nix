@@ -21,7 +21,7 @@
     htop
     pkgs.gnome3.gnome-tweaks
     # python3
-    sublime
+    sublime4
     wget
   ];
 }

@@ -15,13 +15,13 @@
   home.stateVersion = "22.11";
   home.packages = with pkgs; [ 
     chromium
-    # gcc
+    gcc
     git
     gnome.gnome-terminal
     htop
     pkgs.gnome3.gnome-tweaks
     # python3
-    # sublime4
+    sublime4
     wget
   ];
 }
