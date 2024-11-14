@@ -11,6 +11,12 @@ System Management:
   Nixpkgs Version: home-manager --version
   Nixos Version: nixos-version
 
+  nix-channel:
+    sudo nix-channel --add
+    sudo nix-channel --update
+    sudo nix-channel --list
+    sudo nix-channel --remove
+
   Rebuild (sudo nixos-rebuild):
     test - build; switch; don't make boot
     boot - build; don't switch; make boot
