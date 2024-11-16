@@ -1,3 +1,4 @@
+{ config, pkgs, ... }:
 {
   programs.vim = {
     enable = true; 
@@ -12,6 +13,7 @@
       set backspace=indent,eol,start
       set wrap
       set linebreak
+      let g:python_recommended_style = 0
    ''; 
   };
 }

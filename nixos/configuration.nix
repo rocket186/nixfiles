@@ -119,10 +119,9 @@
 # Ammendments
 
   # bashrc (needs symlink)
-  environment.interactiveShellInit = ''
-
-    export PS1="\[\e[37m\]\u\[\e[m\]\[\e[32m\]::\[\e[31m\]\W\\[\e[32m\]\$ \[\e[37m\]"
-  '';
+  # environment.interactiveShellInit = ''
+  #  export PS1="\[\e[37m\]\u\[\e[m\]\[\e[32m\]::\[\e[31m\]\W\\[\e[32m\]\$ \[\e[37m\]"
+  # '';
 
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"

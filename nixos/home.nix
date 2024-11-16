@@ -14,13 +14,18 @@
   home.homeDirectory = "/home/diddy";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
+  programs.bash.enable = true;
   home.packages = with pkgs; [ 
     chromium
     gcc
     git
+    gnome-extension-manager
+    gnomeExtensions.hide-top-bar
     gnome.gnome-terminal
+    gnome3.gnome-tweaks
     htop
-    pkgs.gnome3.gnome-tweaks
+    openbox
+    # pkgs.gnome3.gnome-tweaks
     # python3
     sublime4
     wget

@@ -37,6 +37,8 @@ System Management:
 
   ?: nix-env -q
 
+  Debug Rebuild: journalctl -xe --unit home-manager-diddy (find out what this does_
+
 ----
 
 Sys. Coding:
@@ -54,6 +56,15 @@ Fundamentals:
   Symlinks: 
     ln -s ~/nixfiles/nixos ~/Documents/nix_config
     ln -s ~/nixfiles/nixos/home.nix ~/nixfiles/nixpkgs/
+
+  Gitting:
+    echo "# PARASOL" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin git@github.com:rocket186/PARASOL.git
+    git push -u origin main
 
 ----
 

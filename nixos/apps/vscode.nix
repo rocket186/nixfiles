@@ -6,5 +6,8 @@ programs.vscode = {
     ms-python.python
     ms-toolsai.jupyter
   ];
+  userSettings = {
+    "security.workspace.trust.enabled" = true;
+  };
 };
 }

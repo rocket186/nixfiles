@@ -1,0 +1,12 @@
+Home-Manager not being used: This is because it's using the one in nixos...
+  apps/* in nixpkgs not being used.
+  sudo needed to see home-manager and pkgs channels.
+
+Bash aliases not working: Resolved by adding nixpkgs data to nixos. Not ideal.
+  Related to the above issue.
+
+Make VScode auto-trust: RESOLVED
+
+Remove bezels and make top-bar autohide:
+  hide-top-bar isn't working cos it's outdated. 
+
