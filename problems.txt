@@ -10,3 +10,6 @@ Make VScode auto-trust: RESOLVED
 Remove bezels and make top-bar autohide:
   hide-top-bar isn't working cos it's outdated. 
 
+Python Tabbing:
+  Turns out Vim fucks with Python... nicee
+

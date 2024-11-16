@@ -13,7 +13,9 @@
     bind-key e send-prefix
     
     # Set tmux colours to default terminal colours
-    set -g default-terminal "screen-256color"
+    # set -g default-terminal "screen-256color"
+    set -g default-terminal "xterm"
+
     
     # Format status bar
     set -g status-left '[#I] ' # default

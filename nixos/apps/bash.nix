@@ -7,6 +7,7 @@
     '';
     shellAliases = {
       ls = "ls -l";
+      tmux="TERM=screen-256color-bce tmux";
     };
   };
 }
