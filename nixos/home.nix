@@ -24,6 +24,7 @@
     gnome.gnome-terminal
     gnome3.gnome-tweaks
     htop
+    nasm
     openbox
     # pkgs.gnome3.gnome-tweaks
     # python3
