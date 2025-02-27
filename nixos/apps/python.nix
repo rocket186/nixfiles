@@ -13,6 +13,7 @@
       ppkgs.jupyterlab
       ppkgs.notebook
       ppkgs.jupyter-client
+      ppkgs.scikit-learn
     ]))
   ];
 }
