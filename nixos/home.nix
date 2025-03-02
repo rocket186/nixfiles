@@ -17,6 +17,7 @@
   programs.bash.enable = true;
   home.packages = with pkgs; [ 
     chromium
+    dotnetCorePackages.sdk_9_0_1xx
     gcc
     git
     gnome-extension-manager

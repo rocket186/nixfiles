@@ -11,6 +11,7 @@ programs.vscode = {
     "security.workspace.trust.enabled" = true;
     "window.titleBarStyle" = "custom";
     "window.menuBarVisibility" = "default";
+    "editor.minimap.enabled" = false;
   };
 };
 }
