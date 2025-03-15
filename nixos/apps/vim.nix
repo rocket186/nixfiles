@@ -20,6 +20,8 @@
       set titlestring=%f
       autocmd BufEnter * let &titlestring = expand ('%:p')
       autocmd BufWritePost * let &titlestring = expand ('%:p')
+      set noruler
+      set laststatus=0
    ''; 
   };
 }

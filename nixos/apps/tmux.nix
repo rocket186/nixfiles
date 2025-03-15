@@ -36,7 +36,7 @@
 
     # Set window title to current working directory
     set-option -g window-status-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}"; else basename "#{pane_current_path}"; fi)'
-    set-option -g window-status-current-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}"; else basename "#{pane_current_path}"; fi)'
+    set-option -g window-status-current-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}*"; else basename "#{pane_current_path}*"; fi)'
    ''; 
   };
 }
