@@ -16,6 +16,10 @@
       set wrap
       set linebreak
       let g:python_recommended_style = 0
+      set title
+      set titlestring=%f
+      autocmd BufEnter * let &titlestring = expand ('%:p')
+      autocmd BufWritePost * let &titlestring = expand ('%:p')
    ''; 
   };
 }

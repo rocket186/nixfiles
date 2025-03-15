@@ -29,10 +29,14 @@
     set -g base-index 1
     setw -g pane-base-index 1
 
+    # Set window title to filename when in vim. (works in split pane too)
     set-option -g set-titles on
-    set-option -g set-titles-string '#W:#T' # window title,pane title
+    set-option -g set-titles-string '#{pane_title}' 
     set -g allow-rename on
 
+    # Set window title to current working directory
+    set-option -g window-status-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}"; else basename "#{pane_current_path}"; fi)'
+    set-option -g window-status-current-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}"; else basename "#{pane_current_path}"; fi)'
    ''; 
   };
 }
