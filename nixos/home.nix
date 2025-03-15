@@ -17,6 +17,8 @@
   programs.bash.enable = true;
   home.packages = with pkgs; [ 
     chromium
+    go
+    microsoft-edge
     dotnetCorePackages.sdk_9_0_1xx
     gcc
     git

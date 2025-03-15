@@ -29,6 +29,10 @@
     set -g base-index 1
     setw -g pane-base-index 1
 
+    set-option -g set-titles on
+    set-option -g set-titles-string '#W:#T' # window title,pane title
+    set -g allow-rename on
+
    ''; 
   };
 }

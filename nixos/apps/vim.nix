@@ -2,10 +2,12 @@
 {
   programs.vim = {
     enable = true; 
+    settings = {
+      tabstop=2;
+      shiftwidth=2;
+    };
     extraConfig = ''
       set number
-      set tabstop=2
-      set shiftwidth=2
       set expandtab
       set ai
       set hlsearch
