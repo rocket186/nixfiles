@@ -17,7 +17,6 @@
   programs.bash.enable = true;
   home.packages = with pkgs; [ 
     chromium
-    go
     microsoft-edge
     dotnetCorePackages.sdk_9_0_1xx
     gcc
@@ -26,7 +25,9 @@
     gnomeExtensions.hide-top-bar
     gnome.gnome-terminal
     gnome3.gnome-tweaks
+    go
     htop
+    libreoffice
     nasm
     openbox
     # pkgs.gnome3.gnome-tweaks
