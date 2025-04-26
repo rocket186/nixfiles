@@ -7,21 +7,22 @@
       shiftwidth=2;
     };
     extraConfig = ''
-      set number
-      set expandtab
-      set ai
-      set hlsearch
-      set ruler
-      set backspace=indent,eol,start
-      set wrap
-      set linebreak
-      let g:python_recommended_style = 0
-      set title
-      set titlestring=%f
       autocmd BufEnter * let &titlestring = expand ('%:p')
       autocmd BufWritePost * let &titlestring = expand ('%:p')
-      set noruler
+      let g:python_recommended_style = 0
+      set ai
+      set backspace=indent,eol,start
+      set expandtab
+      set formatoptions-=cro
+      set hlsearch
       set laststatus=0
+      set linebreak
+      set noruler
+      set number
+      set ruler
+      set title
+      set titlestring=%f
+      set wrap
    ''; 
   };
 }

@@ -9,6 +9,8 @@
       ls = "ls -l";
       tmux="TERM=screen-256color-bce tmux";
       calc="libreoffice --calc";
+      nixrs="sudo nixos-rebuild switch";
+      nixf="cd ~/nixfiles/nixos";
     };
   };
 }

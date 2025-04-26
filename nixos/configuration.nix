@@ -127,8 +127,6 @@
     "openssl-1.1.1w"
   ];
 
-  environment.variables.GTK_THEME = "Adwaita-dark";
-
 # End of ammendments.
 
 }

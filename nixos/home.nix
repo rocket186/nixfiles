@@ -17,14 +17,17 @@
   programs.bash.enable = true;
   home.packages = with pkgs; [ 
     chromium
+    cmake
     microsoft-edge
     dotnetCorePackages.sdk_9_0_1xx
     gcc
+    gdb
     git
     gnome-extension-manager
     gnomeExtensions.hide-top-bar
     gnome.gnome-terminal
     gnome3.gnome-tweaks
+    gnumake
     go
     htop
     libreoffice

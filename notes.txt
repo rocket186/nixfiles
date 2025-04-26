@@ -1,10 +1,9 @@
 System Management:
 
   Remove Older Generations:
-    sudo nix-collect-garbage -d
+    sudo nix-collect-garbage  --delete-old
     sudo /run/current-system/bin/switch-to-configuration boot
-    nix-env --list-generations
-    nix-collect-garbage  --delete-old
+      NOTE: Rebuild boot after (nixos-rebuild boot)
 
   Update nixpkgs: nix-channel --update
 
@@ -29,7 +28,7 @@ System Management:
   Apocalypse:
     Rebuild Bootloader: nixos-rebuild switch --install-bootloader
 
-  Garbage Collection: 
+  Garbage Collection(?): 
     nix-collect-garbage -d
 
   Flakes:
