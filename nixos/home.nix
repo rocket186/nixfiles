@@ -21,6 +21,8 @@
     microsoft-edge
     dotnetCorePackages.sdk_9_0_1xx
     gcc
+    glibc # Extra C stuff (for sockets)
+    pkg-config # Extra C stuff (for sockets)
     gdb
     git
     gnome-extension-manager
