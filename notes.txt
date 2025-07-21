@@ -69,3 +69,9 @@ Fundamentals:
 
 ----
 
+Python:
+  Shebang: #!/usr/bin/env python
+
+
+----
+
