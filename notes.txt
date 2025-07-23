@@ -66,6 +66,7 @@ Fundamentals:
     git push -u origin main
     If it's being ridiculous cos there's two accounts, may need to specify account based on .ssh/config host, like this:
       git remote set-url origin git@github.com-UnicornPrism:UnicornPrism/broadsword.git
+        This may also be because rocket186 comes first in the .ssh/config file...
 
 ----
 

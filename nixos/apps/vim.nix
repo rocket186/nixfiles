@@ -10,6 +10,7 @@
       autocmd BufEnter * let &titlestring = expand ('%:p')
       autocmd BufWritePost * let &titlestring = expand ('%:p')
       let g:python_recommended_style = 0
+      let g:markdown_recommended_style = 0
       set ai
       set backspace=indent,eol,start
       set expandtab
