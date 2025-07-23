@@ -6,7 +6,7 @@
     mkcd () { mkdir $1; cd $1; }
     '';
     shellAliases = {
-      ls = "ls -l";
+      ls = "ls -l --color=auto";
       tmux="TERM=screen-256color-bce tmux";
       calc="libreoffice --calc";
       nixrs="sudo nixos-rebuild switch";
