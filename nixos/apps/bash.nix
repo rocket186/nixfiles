@@ -11,11 +11,12 @@ in {
     fi
     '';
     shellAliases = {
-      ls = "ls -l --color=auto";
-      tmux="TERM=screen-256color-bce tmux";
       calc="libreoffice --calc";
+      ls = "ls -l --color=auto";
       nixrs="sudo nixos-rebuild switch";
       nixf="cd ~/nixfiles/nixos";
+      tmux="TERM=screen-256color-bce tmux";
+      vi="vi -c 'set inde='"; # Needed to make Python indentation behave
     };
   };
 }

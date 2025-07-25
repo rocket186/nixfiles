@@ -18,12 +18,12 @@
       set hlsearch
       set laststatus=0
       set linebreak
-      set noruler
       set number
       set ruler
       set title
       set titlestring=%f
       set wrap
+      set inde=
    ''; 
   };
 }
