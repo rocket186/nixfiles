@@ -12,4 +12,5 @@ Remove bezels and make top-bar autohide:
 
 Python Tabbing:
   Turns out Vim fucks with Python... nicee
+    Had further problems with this, but have been resolved by adding an alias for vim :)
 

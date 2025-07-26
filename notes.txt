@@ -1,3 +1,23 @@
+----
+
+Sys. Structure Overview:
+  1. Nix Package Manager: 
+    Install, Build, Manage Packages
+    Purely Functional
+    Supports Profiles, Generations, and Rollbacks
+  2. Nix Expression Language:
+    Describes Packages & Environments
+    Defines Dependencies, Build Steps, and Configurations
+  3. Nix Store:
+    Central Database for Installed Packages and Artifacts
+    Immutable paths, made of hashes.
+  4. Nix Flakes (was channels, but they're deprecated):
+    Mechanism to retrieve and manage package sets.
+  5. Garbage Collector:
+    Cleans up unreferenced packages from Nix store.
+
+----
+
 System Management:
 
   Remove Older Generations:
@@ -5,16 +25,15 @@ System Management:
     sudo /run/current-system/bin/switch-to-configuration boot
       NOTE: Rebuild boot after (nixos-rebuild boot)
 
-  Update nixpkgs: nix-channel --update
-
   Nixpkgs Version: home-manager --version
   Nixos Version: nixos-version
 
-  nix-channel:
+  nix-channel (depricated):
     sudo nix-channel --add
     sudo nix-channel --update
     sudo nix-channel --list
     sudo nix-channel --remove
+  Update nixpkgs: nix-channel --update
 
   Rebuild (sudo nixos-rebuild):
     test - build; switch; don't make boot
@@ -33,6 +52,7 @@ System Management:
 
   Flakes:
     Fix Flakes: sudo nix-store --repair --verify --check-contents
+    Make Template: nix flake init
 
   ?: nix-env -q
 
@@ -73,6 +93,6 @@ Fundamentals:
 Python:
   Shebang: #!/usr/bin/env python
 
-
 ----
+
 
