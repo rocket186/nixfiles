@@ -13,6 +13,7 @@ programs.vscode = {
     "window.menuBarVisibility" = "default";
     "window.titleBarStyle" = "custom";
     "security.workspace.trust.untrustedFiles" = "open";
+    "workbench.startupEditor" = "none";
   };
 };
 }
