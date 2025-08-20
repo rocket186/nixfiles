@@ -8,10 +8,11 @@ programs.vscode = {
     vscodevim.vim
   ];
   userSettings = {
-    "security.workspace.trust.enabled" = true;
-    "window.titleBarStyle" = "custom";
-    "window.menuBarVisibility" = "default";
     "editor.minimap.enabled" = false;
+    "security.workspace.trust.enabled" = true;
+    "window.menuBarVisibility" = "default";
+    "window.titleBarStyle" = "custom";
+    "security.workspace.trust.untrustedFiles" = "open";
   };
 };
 }
