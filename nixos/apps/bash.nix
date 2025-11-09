@@ -9,6 +9,7 @@ in {
     if [ -f ${scriptFile} ]; then
       source ${scriptFile}
     fi
+    export VISUAL=vi
     '';
     shellAliases = {
       calc="libreoffice --calc";
