@@ -7,6 +7,8 @@
       shiftwidth=2;
     };
     extraConfig = ''
+      " Disable auto-comment continuation for all file types
+      autocmd FileType * set formatoptions-=cro
       autocmd BufEnter * let &titlestring = expand ('%:p')
       autocmd BufWritePost * let &titlestring = expand ('%:p')
       let g:python_recommended_style = 0
@@ -23,8 +25,8 @@
       set title
       set titlestring=%f
       set wrap
-      set inde=
    ''; 
   };
 }
+
 

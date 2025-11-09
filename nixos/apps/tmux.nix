@@ -15,7 +15,6 @@
     # Set tmux colours to default terminal colours
     # set -g default-terminal "screen-256color"
     set -g default-terminal "xterm"
-
     
     # Format status bar
     set -g status-left '[#I] ' # default
@@ -33,13 +32,16 @@
     set-option -g set-titles on
     set-option -g set-titles-string '#{pane_title}' 
     set -g allow-rename on
-
     # Set window title to current working directory
     set-option -g window-status-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}"; else basename "#{pane_current_path}"; fi)'
     set-option -g window-status-current-format '#{window_index}:#(if [ -n "#{pane_title}" ]; then basename "#{pane_title}*"; else basename "#{pane_current_path}*"; fi)'
 
     # Turn mouse on (so I can scroll through terminal window)
     set -g mouse on
+
+    # Trying to resolve the comment newline issue
+    set-option -g default-command "exec bash -l"
+
    ''; 
   };
 }

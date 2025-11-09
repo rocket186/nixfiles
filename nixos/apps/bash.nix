@@ -9,7 +9,6 @@ in {
     if [ -f ${scriptFile} ]; then
       source ${scriptFile}
     fi
-    export VISUAL=vi
     '';
     shellAliases = {
       calc="libreoffice --calc";
@@ -17,7 +16,7 @@ in {
       nixrs="sudo nixos-rebuild switch";
       nixf="cd ~/nixfiles/nixos";
       tmux="TERM=screen-256color-bce tmux";
-      vi="vi -c 'set inde='"; # Needed to make Python indentation behave
+      vi="vi -c 'set formatoptions-=cro'"; # Needed to make Python indentation behave
     };
   };
 }
