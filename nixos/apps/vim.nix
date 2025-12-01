@@ -18,6 +18,7 @@
       set expandtab
       set formatoptions-=cro
       set hlsearch
+      set indentexpr= " Stops newline from indenting in Vim
       set laststatus=0
       set linebreak
       set number
