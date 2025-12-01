@@ -21,7 +21,7 @@ Sys. Structure Overview:
 System Management:
 
   Remove Older Generations:
-    sudo nix-collect-garbage  --delete-old
+    sudo nix-collect-garbage --delete-old
     sudo /run/current-system/bin/switch-to-configuration boot
       NOTE: Rebuild boot after (nixos-rebuild boot)
 
@@ -42,7 +42,7 @@ System Management:
     build - don't switch; don't make boot
 
   Updates:
-    Update: nix-channel --update nixos; nixos-rebuild switch
+    Update: nix-channel --update nixos; sudo nixos-rebuild switch
 
   Apocalypse:
     Rebuild Bootloader: nixos-rebuild switch --install-bootloader
@@ -95,4 +95,10 @@ Python:
 
 ----
 
+Test Without Rebuilding: nix-env -f 'vim.nix' -iA vim
+  Runs a version of vim as configured in vim.nix
+  I'd run this in apps, so I don't need to specify path
+    maybe make a nixtest function?
+
+----
 
