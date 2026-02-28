@@ -7,8 +7,12 @@ mkcd() {
 
 gitpush() {
   git add .;
-  git commit -m "$1"
-  git push
+  git commit -m "$1";
+  git push;
 }
 
+cleangens() {
+  sudo nix-collect-garbage --delete-old;
+  sudo /run/current-system/bin/switch-to-configuration boot;
+}
 

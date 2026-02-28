@@ -10,7 +10,8 @@ Sys. Structure Overview:
     Defines Dependencies, Build Steps, and Configurations
   3. Nix Store:
     Central Database for Installed Packages and Artifacts
-    Immutable paths, made of hashes.
+    Immutable (ie never changeable) paths, made of hashes.
+      Ensures every instance is recognised as such.
   4. Nix Flakes (was channels, but they're deprecated):
     Mechanism to retrieve and manage package sets.
   5. Garbage Collector:
@@ -102,3 +103,7 @@ Test Without Rebuilding: nix-env -f 'vim.nix' -iA vim
 
 ----
 
+Quick-Use: nix-shell -p file --run 'file envBuilder.sh'
+  Where file is a handy command, but not something I use all the time...
+
+----
