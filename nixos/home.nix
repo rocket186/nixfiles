@@ -12,10 +12,10 @@
 
   home.username = "diddy";
   home.homeDirectory = "/home/diddy";
-  home.stateVersion = "22.11";
-  programs.home-manager.enable = true;
+  home.stateVersion = "20.09";
   programs.bash.enable = true;
   home.packages = with pkgs; [ 
+    # I shouldn't need all this in here...
     chromium
     cmake
     microsoft-edge
@@ -36,7 +36,9 @@
     nasm
     openbox
     # pkgs.gnome3.gnome-tweaks
-    # python3
+    python3
+    qt5ct # Trying to get sys to update
+    qt6ct # Trying to get sys to update
     sublime4
     wget
   ];

@@ -107,3 +107,14 @@ Quick-Use: nix-shell -p file --run 'file envBuilder.sh'
   Where file is a handy command, but not something I use all the time...
 
 ----
+
+configuration.nix: system level configs (eg hyprland, home manager, etc.)
+home.nix: user level configs (eg python, tmux, etc.)
+
+----
+
+List all dependencies for programs:
+nix-env -qaP --json | jq -r 'to_entries[] | select(.value.depends? != null) | select(.value.depends | index("openssl")) | .key'
+
+----
+

@@ -14,3 +14,10 @@ Python Tabbing:
   Turns out Vim fucks with Python... nicee
     Had further problems with this, but have been resolved by adding an alias for vim :)
 
+Gitter:
+  Bash function for git stuff:
+    If repo not initted: git init -> branch etc. -> first commit
+    If repo initted: git commit "comment"
+    Flags for branching, status, etc. (anything I want really)
+  Probably gonna be more than a function, may warrant its own file :)
+
