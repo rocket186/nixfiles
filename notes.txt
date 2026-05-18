@@ -115,6 +115,8 @@ home.nix: user level configs (eg python, tmux, etc.)
 
 List all dependencies for programs:
 nix-env -qaP --json | jq -r 'to_entries[] | select(.value.depends? != null) | select(.value.depends | index("openssl")) | .key'
+Modern Equivalent:
+nix search nixpkgs openssl --json | jq -r '.[].attrName'
 
 ----
 
